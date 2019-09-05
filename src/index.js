@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './main/frontend/index.css';
+import App from './main/frontend/App';
 import 'semantic-ui-css/semantic.min.css'
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from './main/frontend/serviceWorker';
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
