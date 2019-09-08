@@ -1,5 +1,9 @@
 # micro-learning-app
 
+# Backend
+Run mvn clean package to package front end and backend
+
+# Front end
 ## Available Scripts
 
 In the project directory, you can run:

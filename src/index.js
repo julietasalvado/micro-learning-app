@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './main/frontend/index.css';
+import './index.css';
 import App from './main/frontend/App';
 import 'semantic-ui-css/semantic.min.css'
 import * as serviceWorker from './main/frontend/serviceWorker';
