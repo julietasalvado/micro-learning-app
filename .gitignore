@@ -11,6 +11,7 @@ src/main/frontend/node/
 
 # production
 /build
+/target
 
 # misc
 .idea
