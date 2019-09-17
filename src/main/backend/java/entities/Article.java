@@ -1,4 +1,4 @@
-package main.backend.entities;
+package backend.java.entities;
 
 public class Article {
     private int id;

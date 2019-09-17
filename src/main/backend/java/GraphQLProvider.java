@@ -1,5 +1,6 @@
-package main.backend;
+package backend.java;
 
+import backend.java.fetchers.ArticleDataFetchers;
 import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
 import graphql.GraphQL;
@@ -8,7 +9,6 @@ import graphql.schema.idl.RuntimeWiring;
 import graphql.schema.idl.SchemaGenerator;
 import graphql.schema.idl.SchemaParser;
 import graphql.schema.idl.TypeDefinitionRegistry;
-import main.backend.data.fetchers.ArticleDataFetchers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
@@ -29,7 +29,7 @@ public class GraphQLProvider {
 
     @PostConstruct
     public void init() throws IOException {
-        URL url = Resources.getResource("resources/article.graphqls");
+        URL url = Resources.getResource("backend/resources/article.graphqls");
         String sdl = Resources.toString(url, Charsets.UTF_8);
         GraphQLSchema graphQLSchema = buildSchema(sdl);
         this.graphQL = GraphQL.newGraphQL(graphQLSchema).build();

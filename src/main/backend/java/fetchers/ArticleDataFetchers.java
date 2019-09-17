@@ -1,4 +1,4 @@
-package main.backend.data.fetchers;
+package backend.java.fetchers;
 
 import com.google.common.collect.ImmutableMap;
 import graphql.schema.DataFetcher;
