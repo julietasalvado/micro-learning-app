@@ -1,4 +1,4 @@
-# micro-learning-app
+# Micro-learning-app
 
 Run mvn clean package to package front end and backend
 
