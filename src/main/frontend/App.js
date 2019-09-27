@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Tile from './Tile.js'
+import articleData from "./articleData";
 import {Container, Header, Tab, Input} from "semantic-ui-react";
 
 const panes = [
@@ -11,6 +12,8 @@ const panes = [
 ];
 
 function App() {
+    const articleComponents = articleData.map( article => <Tile header={article.header} url={article.url} body={article.body} />)
+
   return (
       <div>
       <Container style={{ marginTop: '3em' }}>
@@ -18,24 +21,7 @@ function App() {
           <Tab panes={panes} />
 
           <div className="App">
-              <Tile
-                  content={{
-                      header:'Everything React: Tutorials for Beginners and Experts Alike',
-                      url:"https://dzone.com/articles/everything-react-tutorials-for-beginners-and-exper",
-                      body:"Released by Facebook in 2013, React has steadily become an industry-standard library for front-end development. Per Stack Overflow's most recent Developer Survey, React sits at the top of the list for both developer's most loved and wanted web library/framework of 2019. This ..."}}
-              />
-              <Tile
-                  content={{
-                      header:'Everything React: Tutorials for Beginners and Experts Alike',
-                      url:"https://dzone.com/articles/everything-react-tutorials-for-beginners-and-exper",
-                      body:"Released by Facebook in 2013, React has steadily become an industry-standard library for front-end development. Per Stack Overflow's most recent Developer Survey, React sits at the top of the list for both developer's most loved and wanted web library/framework of 2019. This ..."}}
-              />
-              <Tile
-                  content={{
-                      header:'Everything React: Tutorials for Beginners and Experts Alike',
-                      url:"https://dzone.com/articles/everything-react-tutorials-for-beginners-and-exper",
-                      body:"Released by Facebook in 2013, React has steadily become an industry-standard library for front-end development. Per Stack Overflow's most recent Developer Survey, React sits at the top of the list for both developer's most loved and wanted web library/framework of 2019. This ..."}}
-              />
+              {articleComponents}
           </div>
       </Container>
       </div>
