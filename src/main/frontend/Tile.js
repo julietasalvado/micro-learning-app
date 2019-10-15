@@ -4,9 +4,9 @@ import { Card, Icon} from 'semantic-ui-react'
 
 function Tile(props) {
     return (
-        <Card color='teal' href={props.content.url}>
-            <Card.Content header={props.content.header} />
-            <Card.Content description={props.content.body} />
+        <Card color='teal' href={props.url}>
+            <Card.Content header={props.header} />
+            <Card.Content description={props.body} />
             <Card.Content extra>
                 <Icon name='file alternate outline' />Article
             </Card.Content>
