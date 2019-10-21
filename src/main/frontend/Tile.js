@@ -1,5 +1,4 @@
 import React from "react"
-import ReactDOM from "react-dom"
 import { Card, Icon} from 'semantic-ui-react'
 
 function Tile(props) {
